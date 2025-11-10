@@ -1,7 +1,6 @@
 # LLamaMama is a chat interface for communicating with a running Ollama instance (default model: `qwen3:4B`).
 
-![Screenshot](screenshot.png)
-
+<img src="screenshot.png" width="300">
 ## Installation
 
 To get this project up and running on your local machine, follow these steps:
