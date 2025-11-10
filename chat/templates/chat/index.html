@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'chat/css/chat.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="chat-container" id="chatContainer">
+    <header class="chat-header">
+        <h1>LLamaMama Chat</h1>
+        <div class="header-controls">
+            <button id="newChatBtn" class="btn btn-secondary">New Chat</button>
+            <div class="font-controls">
+                <button id="fontDecrease" class="btn btn-icon" title="Decrease font size">A-</button>
+                <button id="fontIncrease" class="btn btn-icon" title="Increase font size">A+</button>
+            </div>
+            <button id="themeToggle" class="btn btn-icon">🌙</button>
+        </div>
+    </header>
+    
+    <div class="chat-messages" id="chatMessages">
+        <div class="welcome-message">
+            <p>Welcome! Start chatting with Ollama.</p>
+        </div>
+    </div>
+    
+    <div class="chat-input-container">
+        <div class="input-group">
+            <textarea id="messageInput" placeholder="Type your message..." rows="1"></textarea>
+            <button id="sendBtn" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    window.defaultTheme = '{{ default_theme }}';
+</script>
+<script src="{% static 'chat/js/chat.js' %}"></script>
+{% endblock %}

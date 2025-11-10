@@ -1,0 +1,11 @@
+{
+  "ollama": {
+    "model": "qwen3:4b",
+    "timeout": 120,
+    "base_url": "http://localhost:11434"
+  },
+  "ui": {
+    "default_theme": "light",
+    "auto_save": true
+  }
+}
